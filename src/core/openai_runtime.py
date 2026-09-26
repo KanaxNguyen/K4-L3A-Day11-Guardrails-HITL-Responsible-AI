@@ -69,6 +69,7 @@ class OpenAIRunner:
                 {"role": "user", "content": user_message},
             ],
             temperature=self.temperature,
+            max_tokens=1000,
         )
         text = (completion.choices[0].message.content or "").strip()
 
